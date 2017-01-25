@@ -1,0 +1,13 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<%= @persons.group(:first_name).count.sort_by(&:last).reverse.flatten %>
+
+<%= form_tag 'generate' do %>
+	<%= text_area_tag(:first_name, "Jonas Tomas Deivis Marius Ernestas") %>
+	<%= text_area_tag(:last_name, " Grafas Ponas Karalius") %>
+	<%= text_area_tag(:adress, "Vilnius Kaunas Klaipeda Siauliai") %>
+	<%= number_field_tag(:iteration) %>
+	<%= submit_tag "Generate" %>
+<% end %>

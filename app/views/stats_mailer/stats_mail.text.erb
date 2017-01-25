@@ -1,0 +1,15 @@
+Welcome to stats generator
+===========================
+
+Last visitor generated  <%= @number %>  people
+
+
+Total number of generated people <%= @persons.count %>
+
+<%= @persons.group(:first_name).count.sort_by(&:last).reverse.flatten  %>
+
+<%= @persons.group(:last_name).count.sort_by(&:last).reverse.flatten  %>
+
+<%= @persons.group(:adress).count.sort_by(&:last).reverse.flatten  %>
+
+

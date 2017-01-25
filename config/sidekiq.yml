@@ -1,0 +1,9 @@
+:concurrency: 5
+:pidfile: tmp/pids/sidekiq.pid
+
+:queues:
+  - default
+  - mailer
+
+
+  # sidekiq -q default -q mailer
