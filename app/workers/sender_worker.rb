@@ -1,6 +1,6 @@
 class SenderWorker
   include Sidekiq::Worker
-  sidekiq_options queue: 'mailer'
+  sidekiq_options queue: 'default'
 
   def perform(iterate)
   	iter = iterate

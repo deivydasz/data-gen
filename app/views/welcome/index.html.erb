@@ -2,7 +2,7 @@
 <p>Find me in app/views/welcome/index.html.erb</p>
 
 
-<%= @persons.group(:first_name).count.sort_by(&:last).reverse.flatten %>
+<%= @persons %>
 
 <%= form_tag 'generate' do %>
 	<%= text_area_tag(:first_name, "Jonas Tomas Deivis Marius Ernestas") %>
@@ -11,3 +11,18 @@
 	<%= number_field_tag(:iteration) %>
 	<%= submit_tag "Generate" %>
 <% end %>
+
+<br />
+<br />
+
+<%= link_to 'Generate csv', generate_csv_path, method: :post %>
+
+<br />
+<br />
+
+<% @exports.each do |export| %>
+	<p><%= link_to  export.file_url, export.file_url, dowload: 'data' %></p>
+
+<% end %>
+<%#= link_to 'download csv', download_csv_path(format: 'csv') %>
+

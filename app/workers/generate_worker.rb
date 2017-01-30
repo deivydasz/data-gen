@@ -6,6 +6,7 @@ class GenerateWorker
     pg = PersonGenerator.find(pg_id)
     Person.create(first_name: first_name, last_name: last_name, adress: adress)
     pg.increment!(:current_count)
+    pg.reload
     pg.complete if pg.current_count == pg.total_count
   end
 end

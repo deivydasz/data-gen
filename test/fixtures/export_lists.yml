@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  exported_count: 1
+  total_count: 1
+  file_url: MyString
+  status: MyString
+
+two:
+  exported_count: 1
+  total_count: 1
+  file_url: MyString
+  status: MyString
